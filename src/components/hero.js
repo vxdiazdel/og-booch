@@ -17,7 +17,7 @@ const Hero = () => (
     `}
     render={data => (
       <section className="hero">
-        <Img fluid={data.hero.childImageSharp.fluid} imgStyle={{width: '100vw', height: '100vh'}} />
+        <Img fluid={data.hero.childImageSharp.fluid} style={{width: '100vw', height: '100vh'}} />
       </section>
     )} 
   />
