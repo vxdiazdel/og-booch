@@ -3,7 +3,7 @@ const { graphql } = require('gatsby');
 
 exports.createPages = ({actions, graphql}) => {
   const { createPage } = actions;
-  const postTemplate = path.resolve('src/templates/post.js');
+  const recipeTemplate = path.resolve('src/templates/recipe.js');
 
   return graphql(`{
     allMarkdownRemark {
@@ -26,7 +26,7 @@ exports.createPages = ({actions, graphql}) => {
     res.data.allMarkdownRemark.edges.forEach(({ node }) => {
       createPage({
         path: node.frontmatter.path,
-        component: postTemplate
+        component: recipeTemplate
       });
     });
   })
