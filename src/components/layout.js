@@ -10,6 +10,7 @@ import PropTypes from "prop-types"
 import { StaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
+import Wrapper from "../elements/wrapper"
 import "bootstrap/dist/css/bootstrap.min.css"
 
 const Layout = ({ children }) => (
@@ -28,11 +29,13 @@ const Layout = ({ children }) => (
       <>
         <Header siteTitle={data.site.siteMetadata.title} />
         <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Built with ❤️ by
-          {` `}
-          <a href="https://www.victordiazdeleon.com" target="_blank" rel="noopener noreferrer">{data.site.siteMetadata.author}</a>
-        </footer>
+        <Wrapper>
+          <footer>
+            © {new Date().getFullYear()}, Built with ❤️ by
+            {` `}
+            <a href="https://www.victordiazdeleon.com" target="_blank" rel="noopener noreferrer">{data.site.siteMetadata.author}</a>
+          </footer>
+        </Wrapper>
       </>
     )}
   />
