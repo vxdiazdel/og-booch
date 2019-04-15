@@ -14,6 +14,9 @@ const Header = ({ siteTitle }) => (
       <div className="collapse navbar-collapse" id="navbarNav">
         <ul className="navbar-nav ml-auto">
           <li className="nav-item">
+            <Link className="nav-link" to="/getting-started" activeClassName="active">Getting Started</Link>
+          </li>
+          <li className="nav-item">
             <Link className="nav-link" to="/recipes" activeClassName="active">Recipes</Link>
           </li>
           <li className="nav-item">
@@ -30,7 +33,7 @@ Header.propTypes = {
 }
 
 Header.defaultProps = {
-  siteTitle: ``,
+  siteTitle: `OG Booch 🧘`,
 }
 
 export default Header
