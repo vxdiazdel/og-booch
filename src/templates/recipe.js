@@ -28,6 +28,13 @@ export const recipeQuery = graphql`
         path
         title
         stars
+        image {
+          childImageSharp {
+            fluid {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
       }
     }
   }

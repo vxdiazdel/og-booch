@@ -1,8 +1,9 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
+import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import Card from "../components/card"
 import Wrapper from "../elements/wrapper"
 
 const Recipes = ({ data }) => (
@@ -10,21 +11,14 @@ const Recipes = ({ data }) => (
     <SEO title="Kombucha recipes" />
     <Wrapper className="mt-5">
       <h1>Recipes</h1>
-      <ul>
+      <div>
         {
           data.allMarkdownRemark.edges.map(recipe => {
             const { node } = recipe;
-            return (
-              <li key={node.id}>
-                <Link to={node.frontmatter.path}>
-                  {node.frontmatter.title}{' '}
-                  {node.frontmatter.stars && <span> - {node.frontmatter.stars} stars</span>}
-                </Link>
-              </li>
-            )
+            return <Card key={node.id} {...node} />;
           })
         }
-      </ul>
+      </div>
     </Wrapper>
   </Layout>
 )
@@ -41,6 +35,13 @@ query {
           title
           path
           stars
+          image {
+            childImageSharp {
+              fluid {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
         }
       }
     }
