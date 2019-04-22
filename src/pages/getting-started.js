@@ -34,7 +34,7 @@ const GettingStarted = ({ data }) => (
       <p>
         Kombucha brews best between 68-78&deg; F. Kombucha will not ferment properly in colder temperatures and will likely grow mold. In the next 7-12 days you should start to see a new cream-colored layer forming on the top of your jar, which is the new SCOBY forming. Remove the cloth cover and use a spoon to taste your liquid Kombucha mixture. If it is sweeter than your desired taste you can replace the cloth cover and let it ferment longer.
       </p>
-      <p><strong>Congratulations! If everything went well your kombucha is now ready to drink. 🙃</strong></p>
+      <p><strong>Congratulations! If everything went well your kombucha is now ready to drink. <span role="img" aria-label="smiley face">🙃</span></strong></p>
       <p>You can enjoy your fresh kombucha plain or you can add additional flavors during the bottling process (also known as 2nd Fermentation).</p>
       <h2>What to Do Next</h2>
       <p>Remove the SCOBY from your gallons jar along with 1-2 cups of your finished kombucha. Set this aside in another jar or container as this will be your new SCOBY and starter tea for future batches of Kombucha.</p>
@@ -47,7 +47,7 @@ const GettingStarted = ({ data }) => (
         <li>Ensure the bottles are properly sealed and store them in a warm, dry place for 2-5 days. The length of time for your second fermentation and flavoring really is solely dependent on personal taste so the only way to really know if you have reached your desired result is by tasting your brew every couple of days to see if it is to your liking. Opening and tasting your kombucha every day or so can also be helpful to release some of the pressure built up in the bottles - this is also known as "burping".</li>
         <li>Good to go? Chill your bottles in the fridge to slow down the carbonation process.</li>
       </ul>
-      <h5>Enjoy your freshly brewed liquid gold! 🤘</h5>
+      <h5>Enjoy your freshly brewed liquid gold! <span role="img" aria-label="rock on">🤘</span></h5>
     </Wrapper>
   </Layout>
 )
